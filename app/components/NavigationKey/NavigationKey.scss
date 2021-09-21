@@ -1,0 +1,31 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  color: white;
+}
+.pagination-menu {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  // opacity: 0.5;
+  // &:hover {
+  //   opacity: 1;
+  // }
+  @media screen and (min-width: $break-1920) {
+    height: 100px;
+    width: 100px;
+  }
+  @media screen and (min-width: $break-4k) {
+    height: 150px;
+    width: 150px;
+  }
+  &.disabled{
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.301" height="22.282" viewBox="0 0 21.301 22.282">
+  <g id="Group_478" data-name="Group 478" transform="translate(-1071.297 -49.657)">
+    <g id="home" transform="translate(1071.488 50.126)">
+      <g id="Group_437" data-name="Group 437" transform="translate(0.208 0)">
+        <path id="Path_427" data-name="Path 427" d="M20.443,9.712,18.982,8.251,10.945.214a.731.731,0,0,0-1.033,0L1.874,8.251.413,9.713a.731.731,0,0,0,1.033,1.033l.213-.215V20.683a.731.731,0,0,0,.731.731H18.465a.731.731,0,0,0,.731-.731V10.531l.214.214a.731.731,0,0,0,1.033-1.033ZM12.62,19.952Zm5.115,0H3.121V9.069l7.307-7.307,7.307,7.307Z" transform="translate(-0.208 0)" fill="#23232d" stroke="#23232d" stroke-width="0.8"/>
+      </g>
+    </g>
+    <circle id="Ellipse_73" data-name="Ellipse 73" cx="2" cy="2" r="2" transform="translate(1077 59)" fill="#23232d"/>
+    <circle id="Ellipse_74" data-name="Ellipse 74" cx="2" cy="2" r="2" transform="translate(1083 64)" fill="#23232d"/>
+    <rect id="Rectangle_303" data-name="Rectangle 303" width="4" height="4" transform="translate(1083 59)" fill="#23232d"/>
+    <rect id="Rectangle_304" data-name="Rectangle 304" width="4" height="4" transform="translate(1077 64)" fill="#23232d"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+@import "../../assets/style/colors";
+@import "../../assets/style/variables";
+@import "../.././assets/style/functions";
+
+.payment-wrapper {
+	background-size: cover;
+	padding: 100px 60px;
+	@media screen and (min-width: $break-4k) {
+		padding: 250px 100px;
+	}
+	@media screen and (max-width: $break-desktop) {
+		padding: 90px 15px;
+	}
+	@media screen and (max-width: $break-mobile) {
+		padding: 75px 0px;
+	}
+	form {
+		div.StripeElement {
+			height: 55px;
+			padding: 13px 10px;
+			margin: 10px 0;
+			border: 3px solid $black-1;
+			
+		}
+		.payment-btn-box {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			button {
+				margin: 10px;
+			}
+			h6.note {
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+			span {
+				font-style: italic;
+			}
+		}
+
+		.error {
+			color: $red;
+		}
+		.success {
+			color: $green-1;
+		}
+	}
+	.ElementsApp, .ElementsApp .InputElement{
+		font-size: size(16);
+	}
+}

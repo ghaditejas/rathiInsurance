@@ -1,0 +1,54 @@
+@import "../../assets/style/_colors.scss";
+@import "../../assets/style/_variables.scss";
+@import "../../assets/style/_functions.scss";
+
+.card-container{
+    padding :0 0 !important;
+    .card {
+        background: $sub-background-color !important;
+        color:  $main-text-color !important;
+        width:350px !important;
+        height:310px !important;
+        border-radius: 20px;
+        @media screen and (max-width: $break-mobile) {
+            width:268px !important;
+            height:405px !important; 
+        }
+       
+        .card-img-top{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: 0px;
+              @media screen and (max-width: $break-mobile) {
+                  height:40%;
+              }
+
+            // height: 50%;
+        }
+        .card-body{
+            background-color: #2C2C2C;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            h4{
+             font-family:$font-family-proxima;
+            }
+            a{
+                color:$green-2 ;
+                text-decoration: underline;
+            }
+            .card-text{
+              color: $grey-9 !important;
+              font-size:size(15);
+            }
+            .card-footer{
+                display: flex;
+                justify-content: space-between;
+                border:none;
+                background-color: transparent;
+                @media screen and (max-width: $break-mobile) {
+                        flex-direction: column;
+                }
+            }
+        }
+    }
+}

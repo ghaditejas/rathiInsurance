@@ -1,0 +1,20 @@
+# Don't check auto-generated stuff into git
+coverage
+build*
+node_modules
+stats.json
+package-lock.json
+yarn.lock
+oldcode.js
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.all-contributorsrc
+docs
+README.md
+CONTRIBUTING.md
+Changelog.md
+*.orig
+yarn.lock
+yarn-error.log

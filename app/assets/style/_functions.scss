@@ -1,0 +1,4 @@
+
+@function size($target, $context: $basic-size) {
+    @return ($target / $context) * 1rem;
+}

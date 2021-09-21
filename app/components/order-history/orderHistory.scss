@@ -1,0 +1,175 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.order-history-container {
+  font-weight: 700;
+  .text-upper-case {
+    text-transform: uppercase;
+  }
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+  .text-bold-black {
+    font-family: $font-family-bebas;
+    font-size: size(20);
+    color: $main-text-color;
+    margin-bottom: 0px;
+  }
+  .text-grey-heading {
+    color: $main-text-color;
+    font-size: size(14);
+  }
+  .col {
+    padding: 0;
+  }
+  .padding-left {
+    padding-left: 50px;
+    @media screen and (max-width: $break-sm) {
+      padding-left: 0px;
+    }
+  }
+  .padding-right {
+    padding-right: 25px;
+    @media screen and (max-width: $break-mobile) {
+      padding-right: 10px;
+    }
+    @media screen and (max-width: $break-sm) {
+      padding-right: 0px;
+    }
+  }
+  .bold-text {
+    font-weight: 700;
+  }
+  .vertical-center {
+    display: flex;
+    align-items: center;
+  }
+  padding-top: 100px;
+  .order-history-heading {
+    padding-bottom: 25px;
+  }
+  .no-orders {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .order-history-main {
+    border: 1px solid $grey-13;
+    border-left: 1px solid $grey-11;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    .row {
+      margin: 0;
+    }
+    .order-details {
+      padding: 20px;
+      transition: box-shadow 0.5s;
+      &.hover-card {
+        &:hover {
+          box-shadow: 0px 4px 9px 2px rgba(71, 179, 32, 0.5);
+          cursor: pointer;
+        }
+      }
+      @media screen and (max-width: $break-mobile) {
+        padding: 10px;
+      }
+      .product-info {
+        border-right: 1px solid $grey-13;
+        @media screen and (max-width: $break-sm) {
+          border-right: transparent;
+          padding-bottom: 15px;
+        }
+        .order-date {
+          font-size: size(20);
+          font-family: $font-family-bebas;
+          color: $grey-11;
+          @media screen and (max-width: $break-sm) {
+            padding-top: 20px;
+          }
+        }
+        .order-number {
+          font-size: size(20);
+          font-family: $font-family-bebas;
+          color: $white;
+          background-color: $green-1;
+          text-align: left;
+          padding: 5px;
+        }
+        .order-name-qty {
+          .product-name {
+            font-size: size(28);
+            font-family: $font-family-bebas;
+          }
+          .seperator {
+            border-left: 2px solid $grey-13;
+            height: 100%;
+            margin: 0 10px;
+          }
+        }
+        .order-price {
+          font-size: size(28);
+          font-family: $font-family-bebas;
+          color: $grey-11;
+        }
+        .order-status-date {
+          font-size: size(14);
+          .status {
+            color: $green-2;
+            padding-right: 5px;
+          }
+        }
+      }
+      .user-info {
+        padding-left: 50px;
+        @media screen and (max-width: $break-mobile) {
+          padding-left: 40px;
+        }
+        @media screen and (max-width: $break-sm) {
+          padding-left: 30px;
+        }
+
+        .icon-div {
+          position: relative;
+          .icon {
+            position: absolute;
+            padding-right: 10px;
+            left: -30px;
+            img {
+              width: 25px;
+            }
+          }
+        }
+        .payment-method {
+          padding-bottom: 20px;
+        }
+        .payment-contact {
+          padding-bottom: 20px;
+          &.padding-left {
+            @media screen and (max-width: $break-mobile) {
+              padding-left: 40px;
+            }
+            @media screen and (max-width: $break-sm) {
+              padding-left: 0px;
+            }
+          }
+        }
+        .payment-address {
+          @media screen and (max-width: $break-sm) {
+            padding-bottom: 20px;
+          }
+        }
+        .reciver {
+          @media screen and (max-width: $break-sm) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.address-container {
+  .address {
+    background-color: $black;
+    padding-top: 25px;
+    margin: 0;
+  }
+}

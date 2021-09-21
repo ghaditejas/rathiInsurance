@@ -1,0 +1,13 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.privacy-policy{
+  padding-top: 100px;
+}
+.address-container{
+  .address{
+    background-color: $black;
+    padding-top: 25px;
+    margin: 0;
+  }
+}

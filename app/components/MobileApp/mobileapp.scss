@@ -1,0 +1,171 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.mobile-app-wrapper {
+  background-image: url(../../assets/images/Products/mobile-background-white.png);
+  padding: 70px 90px 80px 90px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: -4px;
+  @media screen and (min-width: $break-2500) {
+    padding: 200px 90px 200px 90px;
+  }
+  .row {
+    @media screen and (max-width: $break-mobile) {
+      margin: 0px;
+    }
+  }
+  @media screen and (max-width: $break-1024) {
+    padding: 35px 10px 50px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    background-image: url(../../assets/images/banner-background-mobile-white.png);
+    background-repeat: no-repeat;
+    padding: 20px 50px;
+    background-size: 100%;
+  }
+  @media screen and (max-width: $break-sm) {
+    padding: 0;
+  }
+  .mobile-app-image-container {
+    width: 100%;
+    @media screen and (max-width: $break-small-device) {
+      top: 60px !important;
+      &:after {
+        height: 50px;
+        bottom: -50;
+      }
+    }
+    .mobile-app-image {
+      transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms;
+      height: 450px;
+      width: auto;
+      z-index: 1;
+      @media screen and (max-width: $break-sm) {
+        height: 300px;
+        width: auto;
+      }
+      @media screen and (max-width: $break-small-device) {
+        height: 190px;
+        width: auto;
+      }
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 70px;
+      background: url(../../assets/images/Products/shadow-image.png) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      bottom: -50px;
+      display: inline-block;
+    }
+    @media screen and (max-width: $break-mobile) {
+      &:before {
+        content: "";
+        width: 100%;
+        height: 250px;
+        background: url(../../assets/images/Products/mobile-green-bg.png) no-repeat center;
+        background-size: contain;
+        position: absolute;
+        bottom: -70px;
+        display: inline-block;
+        @media screen and (max-width: $break-sm) {
+          height: 160px;
+          bottom: -55px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          height: 105px;
+          bottom: -50px;
+        }
+      }
+    }
+  }
+  .app-description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    // padding-left: 20px;
+    color: $description-text-color;
+    @media screen and (max-width: $break-mobile) {
+      margin-top: 100px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @media screen and (max-width: $break-sm) {
+      // margin-top: 0px;
+      padding: 0px;
+    }
+    @media screen and (max-width: $break-small-device) {
+      // margin-top: 140px;
+    }
+    p {
+      margin-bottom: 0px;
+    }
+    .title-container {
+      // min-width: 450px;
+      max-width: 1200px;
+      font-weight: bold;
+      padding-bottom: 50px;
+      @media screen and (max-width: $break-sm) {
+        width: unset;
+        padding: 0px 5px;
+      }
+      @media screen and (max-width: $break-small-device) {
+        padding-bottom: 65px;
+        width: unset;
+        padding: 0px 5px;
+      }
+      .mobile-app-description {
+        font-size: size(20);
+        justify-content: space-evenly;
+        font-weight: normal;
+      }
+      .color-text {
+        font-family: $font-family-bebas;
+        font-size: size(45);
+        color: $green-2;
+        line-height: 1;
+        @media screen and (max-width: $break-mobile) {
+          font-size: size(35);
+        }
+      }
+    }
+    .mobile-app-description-container {
+      // margin-top: 60px;
+      @media screen and (max-width: $break-sm) {
+        // margin-top: 0px;
+      }
+      .app-store-image {
+        width: auto;
+        height: 50px;
+        padding-right: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.1) inset;
+        @media screen and (max-width: $break-mobile) {
+          height: 52px;
+        }
+        @media screen and (max-width: $break-sm) {
+          height: 45px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          height: 35px;
+        }
+      }
+      .play-store-image {
+        width: auto;
+        height: 50px;
+        padding-left: 5px;
+        @media screen and (max-width: $break-mobile) {
+          height: 52px;
+        }
+        @media screen and (max-width: $break-sm) {
+          height: 45px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

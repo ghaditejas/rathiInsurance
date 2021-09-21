@@ -1,0 +1,512 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.carousel-container {
+  @media screen and (max-width: $break-mobile) {
+    display: none;
+  }
+  .description-text-color {
+    color: $description-text-color;
+  }
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background: url("../../assets/images/banner-background.jpg") no-repeat fixed center;
+  background-size: 100% 100%;
+  .carousel-parent {
+    .carousel {
+      &.slide {
+        width: 100%;
+      }
+    }
+    .carousel-item-custom {
+      transition: transform 1.5s ease-in-out !important;
+    }
+    .animated-stick {
+      position: absolute;
+      height: 100%;
+      right: 32%;
+      bottom: -15%;
+      z-index: 999;
+      transition: bottom right 1.5s ease-in-out;
+      &:hover {
+        transition: 1.5s;
+        bottom: -57%;
+        right: 37%;
+      }
+    }
+  }
+  .wrap-img-div {
+    position: relative;
+    @media screen and (max-width: $break-laptop) {
+      padding-bottom: 40px;
+    }
+
+    img {
+      @media screen and (max-width: $break-1280) {
+        margin-top: 35px;
+      }
+      @media screen and (max-width: $break-1024) {
+        margin-top: 4%;
+      }
+    }
+
+    .mw-100 {
+      max-width: 100%;
+      @media screen and (max-width: $break-desktop) {
+        padding: 0 40px 0 25px;
+      }
+
+      .text-image-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        left: 195px;
+        h1.heading1 {
+          color: $white;
+          @media screen and (min-width: $break-2500) {
+            margin-bottom: 0px;
+          }
+        }
+        h1.heading2 {
+          color: $white;
+        }
+        @media screen and (max-width: $break-1280) {
+          top: 10px;
+        }
+        @media screen and (max-width: $break-laptop) {
+          left: 140px;
+          top: 0;
+        }
+        .button-position {
+          margin-top: 20px;
+          @media screen and (max-width: $break-1024) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  .caraousel-number {
+    position: absolute;
+    top: 0;
+    bottom: 200px;
+    display: flex;
+    justify-content: flex-end;
+    right: 69px;
+    z-index: 1;
+    @media screen and (min-width: $break-4k) {
+      bottom: 350px;
+    }
+    @media screen and (max-width: $break-1366) {
+      bottom: 160px;
+    }
+    @media screen and (max-width: $break-1024) {
+      bottom: 115px;
+    }
+    @media screen and (max-width: $break-laptop) {
+      bottom: 120px;
+    }
+    .number-container {
+      display: flex;
+      color: $description-text-color;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+      &:before {
+        content: "";
+        width: 97px;
+        height: 2px;
+        background-color: $green-3;
+        position: absolute;
+        bottom: 30px;
+        right: 175px;
+        @media screen and (max-width: $break-1024) {
+          width: 77px;
+          bottom: 35px;
+        }
+        @media screen and (max-width: $break-mobile) {
+          position: unset;
+          width: 25px;
+        }
+      }
+      .active-index {
+        font-family: $font-family-bebas;
+        font-size: size(50);
+        padding: 10px;
+        transition: font-size 0.9s;
+        color: $white;
+        @media screen and (max-width: $break-1024) {
+          font-size: size(57);
+        }
+      }
+      .inactive-index {
+        font-family: $font-family-bebas;
+        color: $grey-1;
+        font-size: size(20);
+        z-index: 1;
+        cursor: pointer;
+        padding: 0px 10px 25px 10px;
+        transition: font-size 0.9s;
+        @media screen and (max-width: $break-1024) {
+          padding: 0px 10px 25px 10px;
+        }
+        &:hover {
+          font-size: size(30);
+          padding: 0px 10px 25px 10px;
+          color: $white;
+        }
+      }
+      @media screen and (max-width: $break-laptop) {
+        font-size: size(16);
+      }
+      @media screen and (max-width: $break-mobile) {
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+      }
+    }
+  }
+  .upcoming-activity {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    left: 0;
+    //background-color: $black;
+    //border-top: 2px solid $white-3;
+    .flip-img {
+      min-width: 600px;
+      width: 30%;
+      //border-right: 1px solid $white-3;
+      @media screen and (min-width: $break-1920) {
+        width: 50%;
+      }
+      @media screen and (max-width: $break-laptop) {
+        min-width: 420px;
+      }
+    }
+    @media screen and (max-width: $break-mobile) {
+      position: unset;
+      display: unset;
+    }
+    .image-align {
+      img {
+        @media screen and (min-width: $break-4k) {
+          width: 700px;
+        }
+        @media screen and (max-width: $break-1024) {
+          width: 230px;
+        }
+        @media screen and (max-width: $break-tablet) {
+          width: 230px;
+        }
+      }
+      @media screen and (max-width: $break-mobile) {
+        img {
+          width: 225px;
+          height: auto;
+        }
+      }
+    }
+    .first-bottom-index {
+      min-width: 600px;
+      @media screen and (max-width: $break-desktop) {
+        min-width: 600px;
+      }
+      @media screen and (max-width: $break-1024) {
+        min-width: 450px;
+      }
+      @media screen and (max-width: $break-laptop) {
+        min-width: 420px;
+      }
+      @media screen and (max-width: $break-tablet) {
+        min-width: 350px;
+      }
+      @media screen and (max-width: $break-mobile) {
+        min-width: unset;
+      }
+      .text-description {
+        margin-left: 30px;
+        align-self: center;
+        color: $white;
+        @media screen and (max-width: $break-laptop) {
+          margin-left: 10px;
+        }
+        @media screen and (max-width: $break-mobile) {
+          margin-left: 15px;
+        }
+        .product-number {
+          font-family: $font-family-proxima;
+          color: $green-2;
+          font-size: size(16);
+          @media screen and (min-width: $break-4k) {
+            margin-bottom: 5px;
+          }
+        }
+        .product-name {
+          font-family: $font-family-proxima;
+          font-size: size(18);
+          color: $white;
+          @media screen and (max-width: $break-laptop) {
+            font-size: size(14);
+          }
+          @media screen and (max-width: $break-1024) {
+            font-size: size(12);
+          }
+
+          span {
+            color: $green-2;
+            font-size: size(16);
+            @media screen and (max-width: $break-laptop) {
+              font-size: size(12);
+            }
+          }
+          @media screen and (max-width: $break-mobile) {
+            font-size: size(12);
+          }
+        }
+        .product-description-banner {
+          font-family: $font-family-proxima;
+          color: $white;
+          @media screen and (min-width: $break-4k) {
+            margin-bottom: 5px;
+          }
+          @extend .description-text-color;
+          font-size: size(16);
+          @media screen and (max-width: $break-mobile) {
+            font-size: size(12);
+          }
+          @media screen and (max-width: $break-1024) {
+            font-size: size(12);
+          }
+          @media screen and (max-width: $break-laptop) {
+            font-size: size(12);
+          }
+        }
+      }
+    }
+    .carousel-item-align {
+      margin-left: 20px;
+      width: 50%;
+      padding: 5px;
+      @media screen and (max-width: $break-mobile) {
+        margin-top: 15px;
+        text-align: center;
+      }
+      .carousel-item1 {
+        a {
+          color: $white;
+        }
+        font-family: $font-family-proxima;
+        font-size: size(18);
+        @media screen and (max-width: $break-laptop) {
+          font-size: size(14);
+        }
+        @media screen and (max-width: $break-1024) {
+          font-size: size(13);
+        }
+      }
+      .text-description {
+        min-height: 45px;
+        color: $white;
+        @media screen and (max-width: $break-1024) {
+          font-size: size(12);
+        }
+      }
+      .carousel-item2 {
+        font-family: $font-family-proxima;
+        @extend .description-text-color;
+        font-size: size(16);
+        // margin-right: 30px;
+        @media screen and (max-width: $break-laptop) {
+          font-size: size(12);
+        }
+      }
+    }
+  }
+  .align-social-media {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    display: flex;
+    justify-content: center;
+    writing-mode: tb-rl;
+    @media screen and (max-width: $break-mobile) {
+      display: none;
+    }
+  }
+}
+
+.mobile-view-carousel-container {
+  display: none;
+  @media screen and (max-width: $break-mobile) {
+    display: block;
+    background: url("../../assets/images/banner-background-mobile.png") no-repeat fixed center;
+    background-size: 100% 100%;
+  }
+  .mobile-view-carousel-parent {
+    .mobile-view-wrap-img-div {
+      position: relative;
+      .mobile-view-text-image-wrapper {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 200px;
+        padding-bottom: 100px;
+        // background-image: linear-gradient(rgba(19,19,25,0.58), #131319);
+        //background-image: linear-gradient(rgba(255,255,255,0), 15%, rgba(255,255,255,1));
+        background: linear-gradient(to bottom, rgba(19, 19, 25, 0) 4%, #131319 40%);
+
+        h1.heading {
+          color: $white;
+        }
+        .view-product-btn {
+          margin: 20px 0px;
+        }
+      }
+    }
+    .mobile-view-upcoming-activity {
+      .slidePadding {
+        padding: 16px;
+        min-height: 130px;
+      }
+      .d-flex {
+        display: block !important;
+      }
+      .image-align {
+        img {
+          width: 100%;
+        }
+      }
+      .product-number {
+        font-family: $font-family-proxima;
+        color: $green-2;
+        font-size: size(12);
+      }
+      h4.product-name {
+        font-family: $font-family-proxima;
+        font-size: size(12);
+        color: $white;
+        span {
+          color: $green-2;
+        }
+      }
+      .product-description-banner {
+        color: $white;
+      }
+      .bottom-carousel-heading {
+        color: $white;
+        @media screen and (max-width: $break-mobile) {
+          font-size: size(16);
+          font-family: $font-family-proxima;
+        }
+      }
+      .text-description {
+        color: $white;
+      }
+    }
+  }
+  .mobile-view-caraousel-number {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    .number-container {
+      display: flex;
+      color: $description-text-color;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+      &:before {
+        content: "";
+        width: 97px;
+        height: 2px;
+        background-color: $green-3;
+        position: absolute;
+        bottom: 30px;
+        right: 175px;
+        @media screen and (max-width: $break-1024) {
+          width: 77px;
+          bottom: 55px;
+        }
+        @media screen and (max-width: $break-mobile) {
+          position: unset;
+          width: 25px;
+        }
+      }
+      .active-index {
+        font-family: $font-family-bebas;
+        font-size: size(50);
+        padding: 0px 10px;
+        color: $white;
+
+        @media screen and (max-width: $break-1024) {
+          font-size: size(57);
+        }
+      }
+      .inactive-index {
+        font-family: $font-family-bebas;
+        color: $grey-1;
+        font-size: size(20);
+        z-index: 1;
+        cursor: pointer;
+        padding: 0px 10px 0px 10px;
+        @media screen and (max-width: $break-1024) {
+          padding: 0px 10px 0px 10px;
+        }
+        &:hover {
+          font-size: size(30);
+          padding: 0px 10px 0px 10px;
+          color: $white;
+        }
+      }
+      @media screen and (max-width: $break-laptop) {
+        font-size: size(16);
+      }
+      @media screen and (max-width: $break-mobile) {
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+      }
+    }
+  }
+}
+.bg-image {
+  background: url("../../assets/images/Rectanglebg.png");
+  background-size: contain;
+  width: 70%;
+  @media screen and (min-width: $break-2500) {
+    width: 50%;
+  }
+  @media screen and (max-width: $break-mobile) {
+    width: 100%;
+  }
+}
+.bottom0 {
+  bottom: 0px;
+}
+a.no-style-underline {
+  text-decoration: inherit;
+  color: $white;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    color: $white !important;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  &:visited {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}

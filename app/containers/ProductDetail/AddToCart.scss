@@ -1,0 +1,30 @@
+
+@import "../../assets/style/_colors.scss";
+@import "../../assets/style/_variables.scss";
+
+
+.add-to-cart-container{
+    position: fixed;
+    bottom:0;
+    z-index: 10;
+    .flex-style{
+        border-top:3px solid $primary;
+        // background: $sub-background-color;
+        background: $white;
+        color:$main-text-color;
+        @media screen and (max-width: $break-mobile) {
+            border-top: 0px !important;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding:1rem;
+        }
+        .flex-fill{
+            .green-color{
+                color:$green-3;
+            }
+            @media screen and (max-width: $break-mobile) {
+            flex: 1 0 50% !important;
+            }
+        }
+    }
+}

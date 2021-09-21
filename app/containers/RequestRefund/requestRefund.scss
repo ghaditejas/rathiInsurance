@@ -1,0 +1,31 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.request-refund-main {
+  .request-refund-container {
+    background-color: $white;
+    font-family: $font-family-proxima;
+    text-align: center;
+    background-size: cover;
+    .button-align{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+    }
+  }
+}
+    .modal-content{
+     background-color: $white;
+      border: none !important;
+      border-radius: 0em !important;
+      background-size: cover;
+      padding: 20px 50px;
+      @media screen and (max-width: $break-mobile) {
+        padding: 15px 15px;
+      }
+      .borderrem{
+        &.modal-header {
+          border-bottom: none;
+        }
+      }
+    }

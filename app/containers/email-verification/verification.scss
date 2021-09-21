@@ -1,0 +1,26 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.email-verification-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/banner-background-white.png") no-repeat fixed center;
+  background-size: 100% 100%;
+  background-color: $main-background-color;
+  .email-verification-container {
+    .row {
+      margin: 0px;
+    }
+    .congratulations-text {
+      color: $green-1;
+      text-align: center;
+      font-size: size(80);
+      text-transform: uppercase;
+      @media screen and (max-width: $break-mobile) {
+        font-size: size(48);
+      }
+    }
+  }
+}

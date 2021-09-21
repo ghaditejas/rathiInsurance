@@ -1,0 +1,593 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+
+.add-to-cart-wrapper {
+  // background: url(../../assets/images/ProductShowcase.jpg);
+  background-color: $main-background-color;
+  padding-top: 115px;
+  @media screen and (min-width: $break-1920) {
+    padding-top: 125px;
+  }
+  @media screen and (min-width: $break-4k) {
+    padding-top: 200px;
+  }
+  .heading-wrapper {
+    @media screen and (max-width: $break-mobile) {
+      justify-content: center;
+    }
+  }
+  h2.heading {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    padding-top: 75px;
+  }
+  .row {
+    @media screen and (max-width: $break-mobile) {
+      margin: 0;
+    }
+  }
+  .cart-main {
+    z-index: 1;
+    .col {
+      display: flex;
+      padding: 0;
+      justify-content: space-around;
+    }
+    .heading-main {
+      margin-bottom: 70px;
+      @media screen and (max-width: $break-1920) {
+        margin-bottom: 50px;
+      }
+      @media screen and (max-width: $break-mobile) {
+        margin-bottom: 25px;
+      }
+      .heading-wrapper {
+        @media screen and (max-width: $break-mobile) {
+          flex-wrap: wrap;
+        }
+        .add-to-cart-heading {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          @media screen and (max-width: $break-mobile) {
+            width: 100%;
+            margin-right: 0;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &.cart {
+      border-bottom: 0.8px solid black;
+    }
+    .vertical-center {
+      display: flex;
+      align-items: center;
+    }
+    .img-container {
+      width: 130px;
+      height: 167px;
+      border-radius: 10px;
+      margin: 20px 0px;
+      justify-content: center;
+      margin-left: 10px;
+      background: transparent radial-gradient(closest-side at 50% 50%, #ffffff 0%, #bcbcbc 100%) 0% 0% no-repeat
+        padding-box;
+      @media screen and (min-width: $break-4k) {
+        width: 260px;
+        height: 334px;
+        margin-left: 50px;
+      }
+      @media screen and (min-width: $break-imac) {
+        height: 500px;
+        width: 390px;
+      }
+      @media screen and (max-width: $break-1920) {
+        height: 140px;
+        width: 108px;
+      }
+      @media screen and (max-width: $break-mobile) {
+        height: 80px;
+        width: 62px;
+      }
+    }
+    .closebtn {
+      //  position: absolute;
+      z-index: 999;
+      font-weight: 100;
+      color: $main-text-color;
+      border-bottom: 0.8px solid black;
+      justify-content: space-between;
+
+      // height: 20px;
+      // width: 20px;
+      font-size: size(26);
+      padding-bottom: 25px;
+      padding-top: 25px;
+      font-size: 1rem;
+      @media screen and (max-width: $break-ipad-mini) {
+        font-size: size(20);
+      }
+    }
+    .cart-font {
+      font-size: size(16);
+    }
+    .btn-clear-cart {
+      padding-left: 5px;
+    }
+    .clear-cart {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: size(16);
+    }
+    .desktop-view {
+      @media screen and (max-width: $break-mobile) {
+        display: none;
+      }
+    }
+    .mobile-view {
+      display: none;
+      @media screen and (max-width: $break-mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85px;
+      }
+      .vertical-center {
+        @media screen and (max-width: $break-mobile) {
+          flex: 1 100%;
+        }
+      }
+    }
+    .product-name {
+      letter-spacing: 0.56px;
+      font-size: size(28);
+      font-family: $font-family-bebas;
+      color: $main-text-color;
+      opacity: 1;
+      margin: 0;
+      padding-left: 5px;
+      @media screen and (max-width: $break-1920) {
+        font-size: size(22);
+      }
+      @media screen and (max-width: $break-1920) {
+        font-size: size(22);
+      }
+      @media screen and (max-width: $break-1280) {
+        font-size: size(18);
+      }
+      @media screen and (max-width: $break-mobile) {
+        padding-bottom: 10px;
+      }
+    }
+
+    .product-image-cart {
+      width: 100%;
+    }
+
+    .product-price {
+      letter-spacing: 0.56px;
+      font-size: size(34);
+      color: $green-2;
+      opacity: 1;
+      margin: 0;
+      text-align: center;
+      width: 104px;
+      @media screen and (min-width: $break-4k) {
+        width: 350px;
+      }
+      @media screen and (min-width: $break-imac) {
+        width: 450px;
+      }
+      @media screen and (max-width: $break-1920) {
+        font-size: size(22);
+        width: 81px;
+      }
+      @media screen and (max-width: $break-1280) {
+        font-size: size(18);
+      }
+      @media screen and (max-width: $break-1024) {
+        font-size: size(16);
+        width: 55px;
+      }
+    }
+  }
+
+  .cart-right-footer {
+    margin-top: 100px;
+    @media screen and (max-width: $break-1920) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: $break-ipad-mini) {
+      margin-top: 10px;
+    }
+  }
+  .footer-cart {
+    padding: 28px 0px 0px 0px;
+    @media screen and (max-width: $break-mobile) {
+      padding-bottom: 20px;
+    }
+    .footer-wrapper {
+      @media screen and (max-width: $break-mobile) {
+        padding: 0px;
+      }
+    }
+    .footer-left {
+      background-color: $grey-9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      .coupon-img {
+        height: 20px;
+        width: auto;
+        padding-bottom: 4px;
+      }
+      .invalid-coupon {
+        color: $black !important;
+      }
+      .input-group-text {
+        background: unset;
+        border: none;
+      }
+      .coupon-add {
+        background-color: unset;
+        border: none;
+        border-radius: 0;
+        color: $white;
+        font-size: size(18);
+        height: 30px;
+        @media screen and (max-width: $break-1920) {
+          font-size: size(14);
+        }
+        @media screen and (max-width: $break-ipad-mini) {
+          padding: 0;
+        }
+        &.form-control {
+          &.form-control-sm {
+            &::placeholder {
+              color: $white;
+            }
+          }
+        }
+      }
+      .apply-coupon-btn {
+        font-size: size(16);
+        background: $main-background-color;
+        // border: none;
+        // padding: 0px;
+        border-radius: 0px;
+        color: $main-text-color;
+        width: 220px;
+        padding: 15px 5px;
+        font-family: $font-family-proxima;
+        // @media screen and (max-width: $break-1920) {
+        //   font-size: size(12);
+        // }
+      }
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    @media screen and (max-width: $break-1920) {
+      padding: 10px 0px;
+    }
+    .update-cart {
+      font-size: size(16);
+      background: transparent;
+      border: none;
+      // padding: 10px 0px;
+      color: $white;
+      width: 220px;
+      font-family: "Cabin";
+      @media screen and (max-width: $break-1920) {
+        padding: 10px 0px;
+      }
+      // .update-cart{
+      //   font-size: size(16);
+      //   background: transparent;
+      //   border: none;
+      //   // padding: 10px 0px;
+      //   color: $white;
+      //   width: 220px;
+      //   font-family: "Cabin";
+      //   @media screen and (max-width: $break-1920) {
+      //     font-size: size(12);
+      //   }
+      // }
+    }
+  }
+  .continue_shopping_cart_link{
+    &:hover{
+      text-decoration: none;
+    }
+    .add-more-product {
+      color: $green-2;
+      margin-top: 30px;
+      .add-more-product-link {
+        &:hover{
+          text-decoration: none;
+          border-bottom:1px solid $green-2;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+
+  .cart-total {
+    @media screen and (max-width: $break-mobile) {
+      margin-top: 30px;
+    }
+    .cart-right-content {
+      margin-left: 25px;
+      background: url("../../assets/images/form-background.jpg");
+      min-height: 500px;
+      background-size: cover;
+      @media screen and (max-width: $break-1920) {
+        margin-left: 15px;
+      }
+      @media screen and (max-width: $break-ipad-mini) {
+        margin-left: 0px;
+      }
+    }
+    .cart-total-heading {
+      font-size: size(40);
+      padding-top: 55px;
+      text-align: center;
+      @media screen and (max-width: $break-1920) {
+        font-size: size(36);
+      }
+      @media screen and (max-width: $break-1280) {
+        font-size: size(28);
+      }
+    }
+
+    .subtotal {
+      padding-top: 105px;
+      @media screen and (max-width: $break-mobile) {
+        padding-top: 30px;
+      }
+    }
+    .right-sub-title {
+      font-size: size(24);
+      font-family: $font-family-proxima;
+      text-align: left;
+      padding-left: 10%;
+      @media screen and (max-width: $break-1920) {
+        font-size: size(18);
+      }
+      @media screen and (max-width: $break-1280) {
+        font-size: size(16);
+      }
+
+      @media screen and (max-width: $break-ipad-mini) {
+        font-size: size(14);
+      }
+      @media screen and (max-width: $break-mobile) {
+        font-size: size(16);
+      }
+    }
+    .right-side-value {
+      font-size: size(34);
+      font-family: $font-family-bebas;
+      letter-spacing: 1px;
+      @media screen and (max-width: $break-1920) {
+        font-size: size(26);
+      }
+      @media screen and (max-width: $break-1280) {
+        font-size: size(20);
+      }
+      @media screen and (max-width: $break-ipad-mini) {
+        font-size: size(16);
+        letter-spacing: normal;
+      }
+      @media screen and (max-width: $break-mobile) {
+        letter-spacing: 1px;
+      }
+      &.total-amount {
+        padding-right: 25px;
+        font-size: size(40);
+        font-family: $font-family-bebas;
+        @media screen and (max-width: $break-1920) {
+          font-size: size(32);
+        }
+        @media screen and (max-width: $break-1280) {
+          font-size: size(26);
+        }
+        @media screen and (max-width: $break-ipad-mini) {
+          font-size: size(20);
+        }
+      }
+    }
+    .shipping {
+      padding-top: 20px;
+      .shipping-mode-div {
+        cursor: pointer;
+      }
+      .active:before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        border: 2px solid $white;
+        background-color: $black-3;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: -15px;
+        @media screen and (max-width: $break-1280) {
+          height: 12px;
+          width: 12px;
+          top: 5px;
+        }
+        @media screen and (max-width: $break-ipad-mini) {
+          top: 2px;
+        }
+      }
+      .non-active:before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        border: 2px solid $white;
+        background-color: $white;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: -15px;
+        @media screen and (max-width: $break-1280) {
+          height: 12px;
+          width: 12px;
+          top: 5px;
+        }
+        @media screen and (max-width: $break-ipad-mini) {
+          top: 2px;
+        }
+      }
+      .shipping-mode {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        padding-left: 10px;
+        position: relative;
+        @media screen and (max-width: $break-ipad-mini) {
+          padding-left: 6px;
+        }
+        @media screen and (max-width: $break-mobile) {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .change-address {
+      border-bottom: 1px solid $white;
+      padding-top: 170px;
+      margin: 0 auto;
+      @media screen and (max-width: $break-1920) {
+        padding-top: 90px;
+      }
+      @media screen and (max-width: $break-1280) {
+        padding-top: 130px;
+      }
+      @media screen and (max-width: $break-mobile) {
+        padding-top: 70px;
+      }
+      .change-address-col {
+        text-align: right;
+        padding-right: 0px;
+        padding-bottom: 10px;
+      }
+      .change-address-text {
+        padding-right: 25px;
+        font-size: size(20);
+        font-family: $font-family-proxima;
+        @media screen and (max-width: $break-1920) {
+          font-size: size(16);
+        }
+        @media screen and (max-width: $break-ipad-mini) {
+          font-size: size(14);
+        }
+      }
+    }
+
+    .checkout-total {
+      padding-top: 20px;
+      .right-side-value {
+        float: right;
+      }
+    }
+    .checkout-btn {
+      background-color: $black !important;
+      border: 1px solid $black !important;
+      font-size: size(20);
+      padding: 15px 0px;
+      @media screen and (max-width: $break-1024) {
+        font-size: size(16);
+        padding: 10px 10px;
+      }
+      @media screen and (min-width: $break-mobile) {
+        width: 95%;
+      }
+      @media screen and (min-width: $break-ipad-mini) {
+        width: 80%;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+    .btn-main {
+      margin-top: 25px;
+      margin-bottom: 60px;
+    }
+  }
+  .menu-line-container {
+    @media screen and (max-width: $break-mobile) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .status-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        width: 33.33%;
+        .dot {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          z-index: 2;
+          &.green {
+            box-shadow: 0 0 5px $green-2;
+            transition: box-shadow 0.4;
+            background-color: $green-2;
+          }
+          &.black {
+            background-color: $black;
+          }
+          @media screen and (min-width: $break-4k) {
+            height: 30px;
+            width: 30px;
+          }
+          @media screen and (min-width: $break-imac) {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+
+      // border-bottom: 1px solid $black;
+    }
+    .menu-line {
+      border-bottom: 1px solid $black;
+      width: 65%;
+      height: 1px;
+      margin-top: -5px;
+      z-index: 1;
+      @media screen and (min-width: $break-4k) {
+        margin-top: -15px;
+      }
+      @media screen and (min-width: $break-imac) {
+        margin-top: -20px;
+      }
+    }
+  }
+}

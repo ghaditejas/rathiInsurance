@@ -1,0 +1,256 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.product-wrapper {
+  background-image: url(../../assets/images/Products/product-background-white.png);
+  background-color: $main-background-color;
+  padding: 70px 90px 80px 90px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $break-2500) {
+    padding: 200px 90px 200px 90px;
+  }
+  .row {
+    @media screen and (max-width: $break-mobile) {
+      margin: 0px;
+    }
+  }
+  @media screen and (max-width: $break-1048) {
+    padding: 35px 10px 50px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    background-image: url(../../assets/images/banner-background-mobile-white.png);
+    padding: 20px 50px;
+    background-size: 100%;
+  }
+  @media screen and (max-width: $break-sm) {
+    padding: 0;
+  }
+  .active-image-container {
+    width: 100%;
+    @media screen and (max-width: $break-small-device) {
+      top: 60px !important;
+      &:after {
+        height: 50px;
+        bottom: -50;
+      }
+    }
+    .active-image {
+      transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms;
+      height: 450px;
+      width: 380px;
+      z-index: 1;
+      @media screen and (max-width: $break-sm) {
+        height: 300px;
+        width: 230px;
+      }
+      @media screen and (max-width: $break-small-device) {
+        height: 190px;
+        width: 170px;
+      }
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 70px;
+      background: url(../../assets/images/Products/shadow-image.png) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+    }
+    @media screen and (max-width: $break-mobile) {
+      &:before {
+        content: "";
+        width: 100%;
+        height: 250px;
+        background: url(../../assets/images/Products/mobile-green-bg.png) no-repeat center;
+        background-size: contain;
+        position: absolute;
+        bottom: -15px;
+        display: inline-block;
+        @media screen and (max-width: $break-sm) {
+          height: 160px;
+          bottom: -5px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          height: 105px;
+          bottom: -5px;
+        }
+      }
+    }
+  }
+  .product-description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 20px;
+    color: $white;
+    @media screen and (max-width: $break-mobile) {
+      margin-top: 580px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @media screen and (max-width: $break-sm) {
+      margin-top: 320px;
+      padding: 0px;
+    }
+    @media screen and (max-width: $break-small-device) {
+      margin-top: 280px;
+    }
+    p {
+      margin-bottom: 0px;
+    }
+    .title-container {
+      // width: 300px;
+      font-weight: bold;
+      padding-bottom: 50px;
+      // @media screen and (min-width: $break-4k) {
+      //   width: 800px;
+      // }
+      @media screen and (max-width: $break-small-device) {
+        padding-bottom: 65px;
+      }
+      .color-text {
+        font-family: $font-family-bebas;
+        font-size: size(45);
+        color: $green-2;
+        line-height: 1;
+        @media screen and (max-width: $break-laptop) {
+          font-size: size(32);
+        }
+        @media screen and (max-width: $break-mobile) {
+          font-size: size(34);
+        }
+      }
+      .description-align {
+        font-family: $font-family-bebas;
+        font-size: size(61);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        @media screen and (max-width: $break-mobile) {
+          font-size: size(41);
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          margin-bottom: 5px;
+        }
+      }
+      .discover-link {
+        font-family: $font-family-proxima;
+        font-size: size(15);
+        color: $green-2;
+        text-underline-position: under;
+        text-decoration: underline;
+      }
+    }
+    .image-carousel-container {
+      margin-top: 60px;
+      @media screen and (max-width: $break-sm) {
+        margin-top: 0px;
+      }
+      .tile-container:first-child {
+        margin-right: 20px;
+      }
+      .tile-container {
+        height: 175px;
+        width: 175px;
+        box-shadow: 0;
+        transition: height 0.5s, width 0.5s, box-shadow 0.5s;
+        position: relative;
+        background-color: $green-2;
+        border-radius: 10px;
+        font-size: size(20);
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 0;
+        background-image: radial-gradient($green-2 15%, $green-4 85%);
+        cursor: pointer;
+        @media screen and (min-width: $break-4k) {
+          height: 450px;
+          width: 450px;
+        }
+        &:hover {
+          box-shadow: 0px -1px 0px 3px rgba(40, 89, 22, 0.8), 0 5px 16px 0 rgba(0, 0, 0, 0.3),
+            0 6px 20px 0 rgba(0, 0, 0, 0.3);
+        }
+        @media screen and (max-width: $break-1048) {
+          height: 145px;
+          width: 145px;
+          margin-right: 10px;
+          font-size: size(14);
+        }
+        @media screen and (max-width: $break-mobile) {
+          height: 175px;
+          width: 175px;
+          margin-right: 40px;
+        }
+        @media screen and (max-width: $break-md-tablet) {
+          height: 145px;
+          width: 145px;
+          margin-right: 5px;
+        }
+        @media screen and (max-width: $break-sm) {
+          height: 135px;
+          width: 135px;
+          margin-right: 10px;
+        }
+        @media screen and (max-width: $break-small-device) {
+          height: 110px;
+          width: 110px;
+        }
+        .image-container {
+          width: 150px;
+          position: absolute;
+          bottom: 80px;
+          @media screen and (min-width: $break-4k) {
+            bottom: 200px;
+          }
+          @media screen and (max-width: $break-1048) {
+            width: 130px;
+            bottom: 60px;
+          }
+          @media screen and (max-width: $break-tablet) {
+            width: 130px;
+            bottom: 60px;
+          }
+          @media screen and (max-width: $break-mobile) {
+            width: 150px;
+            bottom: 60px;
+          }
+          @media screen and (max-width: $break-sm) {
+            width: 100px;
+            bottom: 60px;
+          }
+          @media screen and (max-width: $break-small-device) {
+            width: 85px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .product-name {
+          font-family: $font-family-bebas;
+          letter-spacing: 2px;
+          font-size: size(16);
+          color: $white;
+          margin-bottom: 0rem;
+        }
+        .discover-products {
+          font-family: $font-family-proxima;
+          font-size: size(14);
+          color: $white;
+          text-underline-position: under;
+          text-decoration: underline;
+          @media screen and (max-width: $break-tablet) {
+            font-size: size(12);
+          }
+        }
+      }
+    }
+  }
+}

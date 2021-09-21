@@ -1,0 +1,55 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+.productname-text {
+  color: $green-2;
+  font-size: size(48);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "bebas neue";
+  @media screen and (max-width: $break-mobile) {
+    font-size: size(32);
+  }
+}
+.p1 {
+  color: $black;
+}
+.pricespan {
+  color: $black;
+  font-size: size(22);
+  font-weight: 600;
+}
+.productimgstyle {
+  width: 100%;
+}
+
+.modal-content {
+  background-color: $white;
+  border: none !important;
+  border-radius: 0em !important;
+  background-size: cover;
+  padding: 20px 50px;
+  @media screen and (max-width: $break-mobile) {
+    padding: 15px 15px;
+  }
+  .closeborderrem {
+    &.modal-header {
+      border-bottom: none;
+      padding: 0px 0px 10px;
+      .close {
+        outline: none;
+        color: $black;
+      }
+    }
+  }
+}
+.product-detailsbtn{
+  // display: flex;
+  padding: 10px 0px;
+  .add-to-cart{
+    min-width: 120px;
+    padding: .5rem 1rem;
+    margin-right: 5px;
+  }
+}

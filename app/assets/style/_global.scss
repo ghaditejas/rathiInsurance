@@ -1,0 +1,311 @@
+@import "functions";
+@import "variables";
+@import "colors";
+@import "node_modules/bootstrap/scss/bootstrap";
+html {
+  font-size: 16px;
+  @media screen and (min-width: $break-1600) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: $break-1920) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $break-4k) {
+    font-size: 48px;
+    letter-spacing: 2px;
+  }
+  @media screen and (min-width: $break-imac) {
+    font-size: 56px;
+    letter-spacing: 3px;
+  }
+}
+body {
+  font-family: $font-family-proxima;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-bebas;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 60px;
+  @media screen and (max-width: $break-tablet) {
+    padding: 0 40px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    padding: 15px 5px;
+  }
+  // }
+}
+.container-fluid {
+  padding: unset;
+}
+h1.heading {
+  font-size: size(56);
+  color: $main-text-color;
+  line-height: 1;
+  margin-bottom: 0px;
+  @media screen and (min-width: $break-2500) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: $break-laptop) {
+    font-size: size(48);
+  }
+  @media screen and (max-width: $break-mobile) {
+    font-size: size(42);
+  }
+}
+h2.heading {
+  font-size: size(36);
+  color: $highlight-text-color;
+  line-height: 1;
+  margin-bottom: 0px;
+  @media screen and (min-width: $break-2500) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: $break-laptop) {
+    font-size: size(32);
+  }
+  @media screen and (max-width: $break-mobile) {
+    font-size: size(34);
+  }
+}
+h3 {
+  font-size: size(26);
+  color: $green-2;
+}
+h4 {
+  font-size: size(18);
+}
+a {
+  text-decoration: none;
+  background: transparent;
+  font-family: unset;
+  font-size: unset;
+}
+.verified-text {
+  color: $white;
+  text-align: center;
+  font-size: size(16);
+  font-family: $font-family-proxima;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 10px 10px;
+  background-color: #b71928;
+  border-color: transparent !important;
+}
+.success-message {
+  color: $white;
+  text-align: center;
+  font-size: size(16);
+  font-family: $font-family-proxima;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 10px 10px;
+  background-color: $primary;
+  border-color: transparent !important;
+}
+.main-container {
+  padding: 0;
+  .wrapper {
+    display: flex;
+    background-color: $main-background-color;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: auto;
+  }
+}
+.form-wrapper {
+  background: url("../../assets/images/form-background.jpg") no-repeat center;
+  background-size: cover;
+  padding: 100px 60px;
+  @media screen and (min-width: $break-4k) {
+    padding: 250px 100px;
+  }
+  @media screen and (max-width: $break-desktop) {
+    padding: 90px 15px;
+  }
+}
+.form-heading {
+  text-transform: uppercase;
+  font-size: size(40);
+  font-family: $font-family-bebas;
+  @media screen and (max-width: $break-desktop) {
+    font-size: size(34);
+  }
+}
+.form-input-text {
+  background-color: unset;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $white;
+  color: $white;
+  font-size: size(18);
+  padding-bottom: 15px;
+  &[disabled] {
+    background-color: unset;
+  }
+  @media screen and (max-width: $break-desktop) {
+    font-size: size(14);
+  }
+  &:focus {
+    box-shadow: none;
+    border-bottom-width: 2px;
+    background-color: unset;
+    border-color: $white;
+    color: $white;
+  }
+}
+.form-input-textarea {
+  background-color: unset;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $white;
+  color: $white;
+  min-height: size(40);
+  @media screen and (max-width: $break-desktop) {
+    font-size: size(14);
+  }
+  &:focus {
+    box-shadow: none;
+    border-bottom-width: 2px;
+  }
+}
+.border-primary {
+  border: 1px solid;
+}
+.btn-outline-primary {
+  width: 260px;
+  border-radius: 0;
+  font-size: size(16);
+  padding: 15px;
+  box-shadow: unset;
+  transition: box-shadow 0.4s;
+  letter-spacing: 2px;
+  &:hover {
+    color: $primary;
+    background-color: unset;
+    box-shadow: 0 0 5px $green-2;
+    transition: box-shadow 0.4s;
+  }
+  @media screen and (min-width: $break-4k) {
+    width: 500px;
+  }
+  @media screen and (max-width: $break-1024) {
+    width: 200px;
+    padding: 10px;
+  }
+}
+.btn-outline-cancel {
+  border-radius: 0;
+  font-size: size(16);
+  padding: 0.8rem;
+  min-width: 180px;
+  box-shadow: unset;
+  transition: box-shadow 0.4s;
+  letter-spacing: 2px;
+  color: $red;
+  background-color: unset !important;
+  border: 1px solid $red;
+  padding: 0.5rem 2rem;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $red !important;
+    background-color: unset;
+    box-shadow: 0 0 5px $red !important;
+    transition: box-shadow 0.4s;
+    border: 1px solid $red !important;
+  }
+}
+.btn-primary {
+  min-width: 180px;
+  padding: 0.5rem 2rem;
+  // border-radius: 0;
+  // font-size: size(16);
+  // padding: 0.8rem;
+  // min-width: 100px;
+  // box-shadow: unset;
+  // transition: box-shadow 0.4s;
+  // letter-spacing: 1px;
+  // color: $white;
+  // background-color: $green-2 !important;
+  // border: 1px solid transparent;
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   color: $white !important;
+  //   background-color: unset;
+  //   box-shadow: 0 0 5px $green-2 !important;
+  //   transition: box-shadow 0.4s;
+  //   border: 1px solid transparent !important;
+  // }
+}
+.btn.btn-dark {
+  min-width: 180px;
+  padding: 0.5rem 2rem;
+  &.btn-primary {
+    // border: none;
+    // border-radius: 0;
+    // padding: 0.8rem;
+    text-transform: uppercase;
+    // color: $white;
+    // background-color: $black !important;
+    // @media screen and (max-width: $break-laptop) {
+    //   min-width: 140px;
+    // }
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   border: none !important;
+    //   box-shadow: none !important;
+    // }
+  }
+}
+
+p.descriptions {
+  font-size: size(20);
+  font-family: $font-family-proxima;
+}
+.modal-open .modal .modal-main {
+  @media screen and (min-width: $break-1600) {
+    max-width: 900px !important;
+  }
+  @media screen and (min-width: $break-1920) {
+    max-width: 1000px !important;
+  }
+  @media screen and (min-width: $break-4k) {
+    max-width: 1200px !important;
+  }
+  @media screen and (min-width: $break-imac) {
+    max-width: 1400px !important;
+  }
+}
+.modal-dialog {
+  @media screen and (min-width: $break-1600) {
+    max-width: 600px !important;
+  }
+  @media screen and (min-width: $break-1920) {
+    max-width: 700px !important;
+  }
+  @media screen and (min-width: $break-4k) {
+    max-width: 1000px !important;
+  }
+  @media screen and (min-width: $break-imac) {
+    max-width: 1200px !important;
+  }
+}
+
+.toast-body {
+  text-transform: none;
+}

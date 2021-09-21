@@ -1,0 +1,46 @@
+@import "../.././assets/style/variables";
+@import "../.././assets/style/colors";
+@import "../.././assets/style/functions";
+.product-container {
+  display: flex;
+  width: 150%;
+  justify-content: space-between;
+  padding: 10 15px;
+  padding-left: 20px;
+  @media screen and (max-width: $break-tablet) {
+    padding-left: 15px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    padding-left: 0px;
+    justify-content: space-evenly;
+  }
+  @media screen and (max-width: $break-sm) {
+    justify-content: unset;
+    padding: 0 5px;
+    width: 25%;
+  }
+  .category-text {
+    font-family: $font-family-bebas;
+    font-size: size(16);
+    line-height: 1.3;
+    @media screen and (max-width: $break-sm) {
+      font-size: size(12);
+    }
+  }
+  .category-text-numbers {
+    font-family: "Bebas Neue";
+    font-size: size(16);
+    line-height: 1.3;
+    @media screen and (max-width: $break-tablet) {
+      font-size: size(13);
+      margin-right: 55px;
+    }
+    @media screen and (max-width: $break-mobile) {
+      margin-right: 25px;
+    }
+    @media screen and (max-width: $break-sm) {
+      font-size: size(12);
+      margin-left: 5px;
+    }
+  }
+}
